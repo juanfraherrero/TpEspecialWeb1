@@ -4,6 +4,10 @@
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Roboto Serif', sans-serif;
 }
+html {
+    height: 100vh;
+    width: 100vw;
+}
 body {
     background-color: #ff8e00;
     background-image: url(../images/fondonaranjayblanco2.jpg);
@@ -12,20 +16,57 @@ body {
     width: 100%;
 }
 
-nav {
-    margin: 2% 4%;
+.nav-bar {
+    margin: 2vh 4vw;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-
 }
-.logo, .Home, .Users, .Buy {
-    padding: 2%;
+.options{
+    background-color: #162e92;
+    /* background-image: url(../images/fondonaranjayblanco2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: fixed;
+    top: 22.5vh;
+    left:100%;
+    width: 100%;
+    height: calc(100vh - 22.5vh);
+    z-index: 2;
+    transition: left 0.3s;
+}
+.options_visible{
+    left: 0;
+}
+.logo {
+    padding: 2vh 2vw;
+}
+.Home, .Users, .Buy {
+    padding: 2.5vh;
+    border-radius: 25px;
+    transition: background-color 0.3s ;
+}
+.Home:hover, .Users:hover, .Buy:hover {
+    background-color: #ff8e00 ;
+    cursor: pointer;
 }
 .logo img   {
-    max-width: 20%;
+    max-width: 20vh;
 }
+nav .bars{
+    background: none;
+    border: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    cursor: pointer;
+ }
 
 .information_CL {
     min-height: 50vh;
@@ -37,7 +78,7 @@ nav {
 }
 .CL_description{
     flex: 0 1 30vh;
-    font-size: 40px;
+    font-size: calc(2em + 1vw);
     min-width: 50vh;
     text-align: center;
     padding-bottom: 5vh;
@@ -53,7 +94,11 @@ nav {
     background-color: #162e92;
     border: none;
     color: white;
-    /* text-shadow: 0px 1px 1px; */
+    cursor: pointer;
+    transition: box-shadow 0,3s;
+}
+.btn-more_information:hover{
+    box-shadow: 1px 2px 5px 1px black;
 }
 footer {
     position: fixed;
@@ -63,9 +108,22 @@ footer {
 }
 
 
-/* Luego de 813 pixeles para arriba hay que cambiar a desktop */
+@media screen and (min-width: 610px) {
+    nav .bars{
+        display: none;
+    }
+    .options{
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        background: none;
+        position: static;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        transition: none;
+    }
 
-@media screen and (min-width: 550px) {
     .information_CL {
         min-height: 50vh;
         margin: 10vh 5vw;
@@ -84,16 +142,19 @@ footer {
     }
     .CL_description{
         flex: 0 1 30vw;
-        font-size: 40px;
+        font-size: calc(2em + 2vw);
         min-width: 75vw;
         text-align: center;
         padding-bottom: 0px;
 
     }
+    .Home:hover, .Users:hover, .Buy:hover {
+        background-color: #eee ;
+    }
 }
 
-@media screen and (min-width: 813px) {
+/* @media screen and (min-width: 813px) {
     .CL_description{
         font-size: 55px;
     }
-}
+} */
