@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto Serif', sans-serif;
+}
+body {
+    background-color: #ff8e00;
+    background-image: url(../images/fondonaranjayblanco2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+nav {
+    margin: 2% 4%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.logo, .Home, .Users, .Buy {
+    padding: 2%;
+}
+.logo img   {
+    max-width: 20%;
+}
+
+.information_CL {
+    min-height: 50vh;
+    margin: 10vh 5vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.CL_description{
+    flex: 0 1 30vw;
+    font-size: 55px;
+    min-width: 75vw;
+    text-align: center;
+}
+
+.btn-more_information{
+    flex: 0 1 10vw;
+    max-height: 15vh;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1.5%;
+    border-radius: 25px;
+    background-color: #162e92;
+    border: none;
+    color: white;
+    /* text-shadow: 0px 1px 1px; */
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Luego de 813 pixeles para arriba hay que cambiar a desktop */
