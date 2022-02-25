@@ -31,19 +31,20 @@ nav {
     min-height: 50vh;
     margin: 10vh 5vw;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     align-items: center;
 }
 .CL_description{
-    flex: 0 1 30vw;
-    font-size: 55px;
-    min-width: 75vw;
+    flex: 0 1 30vh;
+    font-size: 40px;
+    min-width: 50vh;
     text-align: center;
+    padding-bottom: 5vh;
 }
 
 .btn-more_information{
-    flex: 0 1 10vw;
+    flex: 0 1 10vh;
     max-height: 15vh;
     font-size: 1.5em;
     text-align: center;
@@ -63,3 +64,36 @@ footer {
 
 
 /* Luego de 813 pixeles para arriba hay que cambiar a desktop */
+
+@media screen and (min-width: 550px) {
+    .information_CL {
+        min-height: 50vh;
+        margin: 10vh 5vw;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .information_CL {
+        min-height: 50vh;
+        margin: 10vh 5vw;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .CL_description{
+        flex: 0 1 30vw;
+        font-size: 40px;
+        min-width: 75vw;
+        text-align: center;
+        padding-bottom: 0px;
+
+    }
+}
+
+@media screen and (min-width: 813px) {
+    .CL_description{
+        font-size: 55px;
+    }
+}
