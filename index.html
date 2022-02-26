@@ -7,29 +7,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/estructuraBase.css">
         <link rel="stylesheet" href="css/home.css">
+        <script defer src="js/estructuraBase.js"></script>
         <script defer src="js/home.js"></script>
         <title>Cloud Hosting</title>
     </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="images/logo_CL.png" alt="Logo de Cloud Hosting">
+        </div>
         <nav class="nav-bar">
-            <div class="logo">
-                <img src="images/logo_CL.png" alt="Logo de Cloud Hosting">
-            </div>
             <button class="bars">
                 <img src="images/bars.svg" alt="menu" >
             </button>
             <section class="options">
-                <div class="Home">
+                <a href="index.html" class="Home">
                     Home
-                </div>
-                <div class="Users">
+                </a>
+                <a href="users.html" class="Users">
                     Users
-                </div>
-                <div class="Buy">
+                </a>
+                <a href="buy.html" class="Buy">
                     Buy
-                </div>
+                </a>
             </section>
         </nav>
     </header>
@@ -38,9 +40,10 @@
         <div class="CL_description">
             Global hosting <br> for all developers <br> who are looking for <br> velocity and efficency <br> for web pages
         </div>
-        <button class="btn-more_information">
+        
+        <a href="moreInformation.html" class="btn-more_information">
             More information
-        </button>
+        </a>
     </section>
 
     <footer>
