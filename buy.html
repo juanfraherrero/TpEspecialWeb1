@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/estructuraBase.css">
+        <link rel="stylesheet" href="css/buy.css">
+        <script defer src="js/estructuraBase.js"></script>
+        <title>CL-Buy</title>
+    </head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo_CL.png" alt="Logo de Cloud Hosting">
+        </div>
+        <nav class="nav-bar">
+            <button class="bars">
+                <img src="images/bars.svg" alt="menu" >
+            </button>
+            <section class="options">
+                <a href="index.html" class="Home">
+                    Home
+                </a>
+                <a href="users.html" class="Users">
+                    Users
+                </a>
+                <a href="buy.html" class="Buy">
+                    Buy
+                </a>
+            </section>
+        </nav>
+    </header>
+
+    <section class="mainContainer">
+        <img class="imgBuy" src="images/guysForBuy.svg" alt="Guys buying">
+        <form class="formBuy">
+            <label class="lbl-membership" for="slc-membership">Select the type of membership</label>
+            <select name="slc-membership" id="slc-membership">
+                <option value="single">Single</option>
+                <option value="premium">Premium</option>
+                <option value="business">Business</option>
+            </select>
+            <div class="captcha">
+                    
+            </div>
+            <div class="containerVerifyCaptcha">
+                <input class="inputCaptcha" type="text" name="inputCaptcha" placeholder="ingrese captcha...">
+                <input class="verifyCaptcha" type="button" value="verify" name="verifycaptcha">
+            </div>
+            <input class="sendForm" type="submit" value="Buy">
+        </form>
+    </section>
+
+    <footer>
+        All rights reserved Cloud Host©
+    </footer>
+
+
+</body>
+</html>

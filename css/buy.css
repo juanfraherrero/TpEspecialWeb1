@@ -1,0 +1,130 @@
+.mainContainer{
+    height: 70vh;
+    width: auto;
+    margin: 0 10vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBuy {
+    display: none;
+}
+
+.formBuy{
+    flex: 1 1 auto;
+    width: 50%;
+    padding: 2%;
+    display: grid;
+    grid-template-areas:
+        "lblSelect lblSelect lblSelect lblSelect"
+        ". select select ."
+        "captcha captcha captcha captcha"
+        "verify verify verify verify"
+        ". btnBbuy btnBbuy  ."
+    ;
+    grid-template-rows: max-content 1fr 3fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
+}
+.lbl-membership{
+    grid-area: lblSelect;
+    font-size: calc(0.6em + 0.5vw);
+    font-weight: bold;
+    text-align:center;
+    padding: 1%;
+    margin-bottom: 3%;
+}
+
+.formBuy select {
+    grid-area: select;
+    color: white;
+    font-size: calc(0.8em + 0.5vw);
+    background-color: #162e92;
+    border: none;
+    border-radius: 25px;
+    padding: 2%;
+    text-align: center;
+    transition: box-shadow 0.1s;
+}
+.formBuy select:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+.formBuy option {
+}
+.captcha{
+    grid-area: captcha;
+    background-color: #eee;
+    border: 2px solid black;
+    margin: 2% 0px;
+    
+}
+.containerVerifyCaptcha{
+    grid-area:  verify;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.inputCaptcha {
+    flex: 1 1 30vw;
+    
+    font-size: calc(0.6em + 0.5vw);
+    font-weight: bold;
+    padding: 2%;
+    margin-right: 1vw;
+    border: 2px solid #162e92;
+    border-radius: 25px;
+    background-color: white;
+    height: 2vh;
+    overflow-x: auto;   
+}
+
+.verifyCaptcha{
+    flex: 0 1 2vw;
+    font-size: calc(0.6em + 0.5vw);
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+    background-color: #162e92;
+    padding: 3%;
+    border-radius: 25px;
+    transition: box-shadow 0.2s;
+}
+
+.verifyCaptcha:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+    
+.sendForm{
+    grid-area: btnBbuy;
+    font-size: calc(1em + 0.5vw);
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+    background-color: #ff8e00;
+    margin-top: 1vh;
+    padding: 7%;
+    border-radius: 25px;
+    transition: box-shadow 0.2s;
+}
+
+.sendForm:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+
+
+@media screen and (min-width: 610px) {
+    .mainContainer{
+        justify-content: space-evenly;
+    }
+    .imgBuy {
+        display: block;
+        max-width: 50%;
+    }
+    .formBuy{
+        flex: 0 1 auto;
+    }
+}
