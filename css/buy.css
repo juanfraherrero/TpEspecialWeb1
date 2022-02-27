@@ -22,9 +22,10 @@
         ". select select ."
         "captcha captcha captcha captcha"
         "verify verify verify verify"
+        "answer answer answer answer "
         ". btnBbuy btnBbuy  ."
     ;
-    grid-template-rows: max-content 1fr 3fr 1fr 1fr;
+    grid-template-rows: max-content 1fr 3fr 1fr 1fr 1fr;
     grid-template-columns: repeat(4,1fr);
 }
 .lbl-membership{
@@ -50,14 +51,16 @@
 .formBuy select:hover{
     box-shadow: 0.5px 1px 3px 0.5px black;
 }
-.formBuy option {
-}
+
 .captcha{
     grid-area: captcha;
     background-color: #eee;
     border: 2px solid black;
     margin: 2% 0px;
-    
+    text-align: center;
+    line-height: calc(10vh + 10vw) ;
+    font-size: calc(4em + 1vw);
+
 }
 .containerVerifyCaptcha{
     grid-area:  verify;
@@ -96,6 +99,15 @@
 
 .verifyCaptcha:hover{
     box-shadow: 0.5px 1px 3px 0.5px black;
+}
+
+.answerVerifyCaptcha{
+    grid-area: answer;
+    font-size: calc(0.5em + 0.5vw);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: calc(3vh + 0.5vw);
 }
     
 .sendForm{

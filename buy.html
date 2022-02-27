@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/estructuraBase.css">
         <link rel="stylesheet" href="css/buy.css">
         <script defer src="js/estructuraBase.js"></script>
+        <script defer src="js/buy.js"></script>
         <title>CL-Buy</title>
     </head>
 <body>
@@ -46,11 +47,14 @@
                 <option value="business">Business</option>
             </select>
             <div class="captcha">
-                    
+                
             </div>
             <div class="containerVerifyCaptcha">
-                <input class="inputCaptcha" type="text" name="inputCaptcha" placeholder="ingrese captcha...">
+                <input class="inputCaptcha" type="number" name="inputCaptcha" placeholder="ingrese captcha...">
                 <input class="verifyCaptcha" type="button" value="verify" name="verifycaptcha">
+            </div>
+            <div class="answerVerifyCaptcha">
+
             </div>
             <input class="sendForm" type="submit" value="Buy">
         </form>
