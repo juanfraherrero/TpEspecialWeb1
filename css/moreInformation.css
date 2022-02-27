@@ -1,0 +1,97 @@
+.mainContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.infoHosting{
+    border: 0.3rem solid #162e92;
+    border-radius: 25px;
+    margin: 2vh 2vw;
+    margin-bottom: 4vh;
+    padding: 0.5vh 2vw;
+    text-align: center;
+    width: max-content;
+}
+
+article h1 {
+    font-size: 2rem;   
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+article h3 {
+    font-size: 1rem;
+    margin-bottom: 1.5vh;
+    font-weight: normal;
+}
+
+article .division {
+    margin-bottom: 1vh;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #162e92;
+}
+
+article .firstDivisionUp {
+    border-color: #ff8e00;
+}
+
+article ul {
+    list-style-type: none;
+    line-height: 4vh;
+}
+article ul li {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.firstArticle ul {
+    margin-bottom: 4vh;
+
+}
+
+.btn-buy{
+    display: flex;          /* el display flex se usa para ordenar el tag a*/
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    max-height: 10vh;
+    font-size: 2em;
+    padding: 1.5vh 0vw;
+    border-radius: 25px;
+    background-color: #162e92;
+    transition: box-shadow 0.1s;
+    margin: 2vh 0vw ;
+}
+.btn-buy:hover {
+    box-shadow: 1px 2px 5px 1px black;}
+
+@media screen and (min-width: 610px){
+    .mainContainer {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+        
+    }
+    article h3 {
+        height: 2.5vh;
+        
+    }
+    article .division {
+        border-color: #ff8e00;
+    }   
+    article .below {
+        border-color: #162e92;
+    }   
+    
+
+}
