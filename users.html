@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/estructuraBase.css">
+        <link rel="stylesheet" href="css/users.css">
+        <script defer src="js/estructuraBase.js"></script>
+        <title>CL-users</title>
+    </head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo_CL.png" alt="Logo de Cloud Hosting">
+        </div>
+        <nav class="nav-bar">
+            <button class="bars">
+                <img src="images/bars.svg" alt="menu" >
+            </button>
+            <section class="options">
+                <a href="index.html" class="Home">
+                    Home
+                </a>
+                <a href="users.html" class="Users">
+                    Users
+                </a>
+                <a href="buy.html" class="Buy">
+                    Buy
+                </a>
+            </section>
+        </nav>
+    </header>
+
+    <h1 class="title">Users experience with our service</h1>
+    
+    <table class="comments">
+        <thead>
+            <tr>
+                <th class="table-title firstColumn">info</th>
+                <th class="table-title secondColumn">comment</th>
+                <th class="table-title thirdColumn">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="infoUserColumn firstColumn">
+                    <div class="name">nombre</div>
+                    <div class="membershipType">tipo de membresía</div>
+                    <div class="time">fecha</div>
+                </td>
+                <td class="text secondColumn" > lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio blanditiis excepturi tempore voluptatibus asperiores minima inventore omnis perferendis, minus sequi? Deleniti voluptatem recusandae quibusdam? Expedita praesentium unde nihil. Repudiandae, officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum facere, hic alias perferendis cum voluptatum recusandae tempora eaque similique facilis aperiam nobis, repellendus ducimus dolor enim quas nulla voluptatibus.</td>
+                <td class="optionsColumn thirdColumn">
+                    <button class="edit">edit</button>
+                    <button class="delete">delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoUserColumn firstColumn">
+                    <div class="name">nombre</div>
+                    <div class="membershipType">tipo de membresía</div>
+                    <div class="time">fecha</div>
+                </td>
+                <td class="text secondColumn" > lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio blanditiis excepturi tempore voluptatibus asperiores minima inventore omnis perferendis, minus sequi? Deleniti voluptatem recusandae quibusdam? Expedita praesentium unde nihil. Repudiandae, officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum facere, hic alias perferendis cum voluptatum recusandae tempora eaque similique facilis aperiam nobis, repellendus ducimus dolor enim quas nulla voluptatibus.</td>
+                <td class="optionsColumn thirdColumn">
+                    <button class="edit">edit</button>
+                    <button class="delete">delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="infoUserColumn firstColumn">
+                    <div class="name">nombre</div>
+                    <div class="membershipType">tipo de membresía</div>
+                    <div class="time">fecha</div>
+                </td>
+                <td class="text secondColumn" > lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio blanditiis excepturi tempore voluptatibus asperiores minima inventore omnis perferendis, minus sequi? Deleniti voluptatem recusandae quibusdam? Expedita praesentium unde nihil. Repudiandae, officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum facere, hic alias perferendis cum voluptatum recusandae tempora eaque similique facilis aperiam nobis, repellendus ducimus dolor enim quas nulla voluptatibus.</td>
+                <td class="optionsColumn thirdColumn">
+                    <button class="edit">edit</button>
+                    <button class="delete">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="divButton">
+        <button class="moreComments">more comments</button>
+    </div>
+    
+    <h1 class="title">add comment</h1>
+    <form class="addComment">
+        <div class="infoUserToPost">
+            <input class="name" type="text" name="name" placeholder="name...">
+            <input class="surname" type="text" name="surname" placeholder="surname...">
+            <select name="slc-membership" id="slc-membership">
+                <option>Membership</option>
+                <option value="single">Single</option>
+                <option value="premium">Premium</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+        <textarea name="comment" placeholder="place your comment..."></textarea>
+        <input class="sendForm" type="submit" value="send">
+        <hr class="divison">
+    </form>
+    <div class="divButton">
+        <buttton class="clearComments"><span>caution</span><br>clear all comments</buttton>
+    </div>
+    <footer>
+        All rights reserved Cloud Host©
+    </footer>
+
+
+</body>
+</html>

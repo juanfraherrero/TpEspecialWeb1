@@ -1,7 +1,8 @@
 .mainContainer{
     height: 70vh;
+
     width: auto;
-    margin: 0 10vw;
+    margin: 5vh 10vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -15,6 +16,7 @@
 .formBuy{
     flex: 1 1 auto;
     width: 50%;
+    max-height: 70vh;
     padding: 2%;
     display: grid;
     grid-template-areas:
@@ -88,10 +90,10 @@
 .verifyCaptcha{
     flex: 0 1 2vw;
     font-size: calc(0.6em + 0.5vw);
-    font-weight: bold;
     text-transform: capitalize;
     border: none;
     background-color: #162e92;
+    color: white;
     padding: 3%;
     border-radius: 25px;
     transition: box-shadow 0.2s;
@@ -115,7 +117,7 @@
     font-size: calc(1em + 0.5vw);
     font-weight: bold;
     text-transform: capitalize;
-    border: none;
+    border: 1px solid #162e92;
     background-color: #ff8e00;
     margin-top: 1vh;
     padding: 7%;

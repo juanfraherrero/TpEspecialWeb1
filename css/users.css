@@ -1,0 +1,231 @@
+/* estilos para la tabla*/
+.title {
+    width: 100%;
+    margin: 3vh 0vw;
+    text-align: center;
+    font-size: calc(1.5em + 1vw) ;
+    text-transform: capitalize;
+}
+body table {
+    max-width: 100%;
+    border-collapse: collapse;
+    border:none;
+    background-color: #eee;
+}
+.table-title{
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1%;
+    border-bottom: 2px solid #ff8e00;
+}
+
+.fisrtColumn {
+    width: 20%;
+}
+.secondColumn{
+    width: 65%;
+}
+.thirdColumn{
+    width: 15%;
+}
+table .infoUserColumn{
+    vertical-align: middle;
+}
+table tbody tr{
+    border-bottom: 2px solid #162e92;
+}
+table tbody .name, table tbody .membershipType, table tbody .time{
+    text-align: center;
+    padding: 2%;
+    text-transform: capitalize;
+    font-size: 0.9em;
+}
+.businessRow{
+    background-color: #ff8e00;
+}
+
+
+/*estilos para el texto */
+table tbody .text{
+    padding: 2%;
+}
+
+/* estilos para las opciones*/
+table tbody .optionsColumn{
+    vertical-align: middle; 
+    text-align: center;   
+}
+
+table tbody .edit, table tbody .delete {
+    background-color: #162e92;
+    color: white;
+    padding:10%;
+    margin: 2vh 0vw;
+    border: none;
+    border-radius: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+table tbody .edit:hover, table tbody .delete:hover {
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+
+/* estilo para el botón de más comentarios*/
+
+.divButton{
+    width: 100%;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.divButton .moreComments{
+    background-color: #162e92;
+    color: white;
+    padding:1%;
+    margin: 5vh 0vw;
+    border: none;
+    border-radius: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+.divButton .moreComments:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+
+/* estilos para el formulario de agregar comentario*/
+
+.addComment{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60vw;
+    padding: 2vh 5vw;
+    padding-top: 0;
+    margin: 0 auto;
+}
+.addComment .infoUserToPost{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+.addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost #slc-membership{
+    flex: 1 1 auto;
+    background-color: #eee;
+    padding:1%;
+    border: 2px solid #162e92;
+    border-radius: 25px;
+    text-transform: capitalize;
+    margin: 1vh 0vw;
+} 
+.addComment .infoUserToPost .name,.addComment .infoUserToPost .surname{
+    margin-right: 1vw;
+}
+
+.addComment .infoUserToPost #slc-membership {
+    flex: 1 1 auto;
+    color: white;
+    background-color: #162e92;
+    font-size: calc(0.8em + 0.5vw);
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    
+}
+.addComment #slc-membership:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+
+.addComment textarea{
+    width: 90%;
+    padding: 4%;
+    border: 2px solid #162e92;
+    border-radius: 25px;
+    min-height: 40vh;
+    margin-bottom: 4vh;
+}
+
+.addComment .sendForm{
+    align-self: flex-end;
+    width: 20vw;
+    padding: 2%;
+    background-color: #162e92;
+    color: white;
+    text-transform: capitalize;
+    font-size: calc(0.8em + 1vw);
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 5vh;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+
+}
+.addComment .sendForm:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+/*estilo de la dicvión con el botón de clear*/
+.addComment hr{
+    width: 50vw;
+    border-style: solid;
+    border:2px solid #162e92;
+
+}
+/*estilo del último botón que vacía todos los comentarios, feature de superusuario*/
+.comments {
+    margin: 1vh 10vw;
+}
+.clearComments{
+    width: 50vw;
+    background-color: #162e92;
+    color: white;
+    text-transform: capitalize;
+    font-size: calc(1em + 2vw);
+    border: none;
+    border-radius: 25px;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+    padding: 1%;
+    padding-top: 0;
+    cursor: pointer;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+.clearComments span{
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: red;
+    line-height: 2em;
+}
+.clearComments:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+
+/*desktop*/
+@media screen and (min-width:610px) {
+    .addComment{
+        padding-top: 2vh;
+    }
+
+    .addComment .infoUserToPost{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5vh 0vw;
+    }
+    .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost #slc-membership{
+        margin: 0;
+        width: 10vh;
+
+    }
+}
