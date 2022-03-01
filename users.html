@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/estructuraBase.css">
         <link rel="stylesheet" href="css/users.css">
         <script defer src="js/estructuraBase.js"></script>
+        <script defer src="js/users.js"></script>
         <title>CL-users</title>
     </head>
 <body>
@@ -36,7 +37,7 @@
     </header>
 
     <h1 class="title">Users experience with our service</h1>
-    
+    <h3 class="loadingComments"></h3>
     <table class="comments">
         <thead>
             <tr>
@@ -46,42 +47,6 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="infoUserColumn firstColumn">
-                    <div class="name">nombre</div>
-                    <div class="membershipType">tipo de membresía</div>
-                    <div class="time">fecha</div>
-                </td>
-                <td class="text secondColumn" > lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio blanditiis excepturi tempore voluptatibus asperiores minima inventore omnis perferendis, minus sequi? Deleniti voluptatem recusandae quibusdam? Expedita praesentium unde nihil. Repudiandae, officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum facere, hic alias perferendis cum voluptatum recusandae tempora eaque similique facilis aperiam nobis, repellendus ducimus dolor enim quas nulla voluptatibus.</td>
-                <td class="optionsColumn thirdColumn">
-                    <button class="edit">edit</button>
-                    <button class="delete">delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="infoUserColumn firstColumn">
-                    <div class="name">nombre</div>
-                    <div class="membershipType">tipo de membresía</div>
-                    <div class="time">fecha</div>
-                </td>
-                <td class="text secondColumn" > lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio blanditiis excepturi tempore voluptatibus asperiores minima inventore omnis perferendis, minus sequi? Deleniti voluptatem recusandae quibusdam? Expedita praesentium unde nihil. Repudiandae, officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum facere, hic alias perferendis cum voluptatum recusandae tempora eaque similique facilis aperiam nobis, repellendus ducimus dolor enim quas nulla voluptatibus.</td>
-                <td class="optionsColumn thirdColumn">
-                    <button class="edit">edit</button>
-                    <button class="delete">delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="infoUserColumn firstColumn">
-                    <div class="name">nombre</div>
-                    <div class="membershipType">tipo de membresía</div>
-                    <div class="time">fecha</div>
-                </td>
-                <td class="text secondColumn" > lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio blanditiis excepturi tempore voluptatibus asperiores minima inventore omnis perferendis, minus sequi? Deleniti voluptatem recusandae quibusdam? Expedita praesentium unde nihil. Repudiandae, officia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum facere, hic alias perferendis cum voluptatum recusandae tempora eaque similique facilis aperiam nobis, repellendus ducimus dolor enim quas nulla voluptatibus.</td>
-                <td class="optionsColumn thirdColumn">
-                    <button class="edit">edit</button>
-                    <button class="delete">delete</button>
-                </td>
-            </tr>
         </tbody>
     </table>
 
@@ -95,7 +60,7 @@
             <input class="name" type="text" name="name" placeholder="name...">
             <input class="surname" type="text" name="surname" placeholder="surname...">
             <select name="slc-membership" id="slc-membership">
-                <option>Membership</option>
+                <option>Membership Type</option>
                 <option value="single">Single</option>
                 <option value="premium">Premium</option>
                 <option value="business">Business</option>
@@ -109,7 +74,7 @@
         <buttton class="clearComments"><span>caution</span><br>clear all comments</buttton>
     </div>
     <footer>
-        All rights reserved Cloud Host©
+        All rights reserved Cloud Hosting©
     </footer>
 
 

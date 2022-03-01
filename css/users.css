@@ -7,7 +7,8 @@
     text-transform: capitalize;
 }
 body table {
-    max-width: 100%;
+    max-width: 90vw;
+    width: 80vw;
     border-collapse: collapse;
     border:none;
     background-color: #eee;
@@ -59,8 +60,9 @@ table tbody .optionsColumn{
 table tbody .edit, table tbody .delete {
     background-color: #162e92;
     color: white;
+    font-size: calc(0.4em + 0.5vw + 0.5vh);
     padding:10%;
-    margin: 2vh 0vw;
+    margin: 2vh 0.2vw;
     border: none;
     border-radius: 25px;
     text-transform: capitalize;
@@ -88,6 +90,7 @@ table tbody .edit:hover, table tbody .delete:hover {
     margin: 5vh 0vw;
     border: none;
     border-radius: 25px;
+    font-size: calc(0.5em + 0.5vw + 0.5vh);
     text-transform: capitalize;
     cursor: pointer;
     transition: box-shadow 0.2s;
@@ -181,7 +184,7 @@ table tbody .edit:hover, table tbody .delete:hover {
 }
 /*estilo del último botón que vacía todos los comentarios, feature de superusuario*/
 .comments {
-    margin: 1vh 10vw;
+    margin: 1vh auto;
 }
 .clearComments{
     width: 50vw;
@@ -228,4 +231,18 @@ table tbody .edit:hover, table tbody .delete:hover {
         width: 10vh;
 
     }
+}
+
+/* added styles for error or messages in screen */
+
+.loadingComments {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 2%;
+    padding: 1%;
+}
+.errorRow{
+    text-align: center;
+    vertical-align: center;
+    font-size: calc(1em + 0.5vw + 0.5vh);
 }

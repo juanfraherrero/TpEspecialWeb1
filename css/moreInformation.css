@@ -3,17 +3,16 @@
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 
 .infoHosting{
     border: 0.3rem solid #162e92;
     border-radius: 25px;
     margin: 2vh 2vw;
-    margin-bottom: 4vh;
+    margin-bottom: 6vh;
     padding: 0.5vh 2vw;
     text-align: center;
-    width: max-content;
+    /* width: max-content; */
 }
 
 article h1 {
