@@ -9,6 +9,7 @@ function initPage() {
     let btnMoreComment = document.querySelector("#moreComments");
     let btnDeleteAll = document.querySelector(".divButton #clearComments");
     let btnSend = document.querySelector(".sendForm");    
+    let btnSendx3 = document.querySelector(".sendx3Form");    
     let btnCancel = document.querySelector("form .cancel");    
     let btnConfirm = document.querySelector("form .confirm");    
     let containerForComments = document.querySelector("table tbody");
@@ -16,6 +17,7 @@ function initPage() {
     let titleAddComment = document.querySelector("body #toAddComment");
     let idForEditComment = 0;
     //for the filter
+    let titleFiltro = document.querySelector("#toFilter")
     let containerFilter = document.querySelector(".filtro")
     let containerNameToFilter = document.querySelector("#textoAFiltrar");
     let containerMembershipToFilter = document.querySelector("section .slc-membership");
@@ -68,11 +70,13 @@ function initPage() {
     }
     //toggle buttons between edit a comment and confirm or cancel the edition
     function toggleElements(){
-        divMoreComment.classList.toggle("hide");
         btnCancel.classList.toggle("hide");
         btnConfirm.classList.toggle("hide");
         btnSend.classList.toggle("hide");
+        btnSendx3.classList.toggle("hide");
+        divMoreComment.classList.toggle("hide");
         containerFilter.classList.toggle("hide");
+        titleFiltro.classList.toggle("hide");
     }
     //show in the form the content of the object, the object is a comment
     function showInfoComment(object){
@@ -283,6 +287,22 @@ function initPage() {
             console.log(error);
         }
     }
+    //post three comments in to the service API
+    async function postCommentx3(){
+        let comment = createjson();
+        containerForMessagesToUser.innerHTML = "Posting the three Comments... this could take a moment";
+        for (let index = 0; index < 3; index++) {
+            try{
+                let response = await fetch(url, {
+                    "method":"POST",
+                    "headers":{"Content-type":"application/json"},
+                    "body": JSON.stringify(comment)
+                });
+            }catch(error){
+                console.log(error);
+            }
+        }
+    }
     //restore the elements as if we never press the edit a specific comment
     function restoreEdit(event) {
         event.preventDefault();
@@ -361,6 +381,14 @@ function initPage() {
     btnSend.addEventListener("click", (event)=> {
         event.preventDefault();
         postComment().then(()=>{
+            indice = 0;
+            fetchComments();
+            clearForm();
+        })
+    });
+    btnSendx3.addEventListener("click", (event)=> {
+        event.preventDefault();
+        postCommentx3().then(()=>{
             indice = 0;
             fetchComments();
             clearForm();
