@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     //redirect to home
     function redirigirHome(){
-        window.location.href = "../index.html"
+        window.location.pathname = "/index.html"
     }
     //set the captcha when the page start
     setearCaptcha();
@@ -46,5 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
             answerFinal.innerHTML = "please verify the captcha";
         }
     })
+
+    console.log(window.location)
 
 })

@@ -57,16 +57,18 @@
     <h1 class="title addComment">add comment</h1>
     <form class="addComment">
         <div class="infoUserToPost">
-            <input class="name" type="text" name="name" placeholder="name...">
-            <input class="surname" type="text" name="surname" placeholder="surname...">
-            <select name="slc-membership" id="slc-membership">
-                <option>Membership Type</option>
-                <option value="single">Single</option>
-                <option value="premium">Premium</option>
-                <option value="business">Business</option>
-            </select>
+            <input class="name" type="text" name="name" placeholder="name..." required>
+            <input class="surname" type="text" name="surname" placeholder="surname..." >
+            <div class="divMembership">
+                <label>Membership Type</label>
+                <select name="slc-membership" id="slc-membership" >
+                    <option selected value="single">Single</option>
+                    <option value="premium">Premium</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
         </div>
-        <textarea name="comment" placeholder="place your comment..."></textarea>
+        <textarea name="comment" placeholder="place your comment..."  ></textarea>
         <div class="buttonsForm">
             <input class="editButton cancel hide" type="submit" value="cancel">
             <input class="editButton confirm hide" type="submit" value="confirm">

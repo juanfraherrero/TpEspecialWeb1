@@ -213,6 +213,10 @@ function initPage() {
         row.appendChild(tdInfoUser);
         row.appendChild(tdComment);
         row.appendChild(tdOptions);
+        if (array[indice].membership == "business"){
+            row.className = "highlight";                                     //<div class="mebershipType"></div>
+        }
+
 
         return row;
     }

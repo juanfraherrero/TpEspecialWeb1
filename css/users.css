@@ -134,9 +134,18 @@ table tbody .edit:hover, table tbody .delete:hover {
 .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname{
     margin-right: 1vw;
 }
-
-.addComment .infoUserToPost #slc-membership {
+.divMembership{
     flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.divMembership label{
+    font-weight: bold;
+    font-size: calc(0.5em + 0.3vw);
+}
+.addComment .infoUserToPost #slc-membership {
+    width: 100%;
     color: white;
     background-color: #162e92;
     font-size: calc(0.8em + 0.5vw);
@@ -239,7 +248,7 @@ table tbody .edit:hover, table tbody .delete:hover {
     }
     .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost #slc-membership{
         margin: 0;
-        width: 10vh;
+        /* width: 10vh; */
 
     }
 }
@@ -259,4 +268,7 @@ table tbody .edit:hover, table tbody .delete:hover {
 }
 .hide{
     display: none;
+}
+.highlight{
+    background-color: rgba(22, 46, 146, 0.2);
 }
