@@ -54,7 +54,7 @@
         <button class="moreComments">more comments</button>
     </div>
     
-    <h1 class="title">add comment</h1>
+    <h1 class="title addComment">add comment</h1>
     <form class="addComment">
         <div class="infoUserToPost">
             <input class="name" type="text" name="name" placeholder="name...">
@@ -67,7 +67,11 @@
             </select>
         </div>
         <textarea name="comment" placeholder="place your comment..."></textarea>
-        <input class="sendForm" type="submit" value="send">
+        <div class="buttonsForm">
+            <input class="editButton cancel hide" type="submit" value="cancel">
+            <input class="editButton confirm hide" type="submit" value="confirm">
+            <input class="editButton sendForm" type="submit" value="send">
+        </div>
         <hr class="divison">
     </form>
     <div class="divButton">
