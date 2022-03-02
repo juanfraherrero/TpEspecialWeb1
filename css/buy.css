@@ -1,3 +1,6 @@
+html{
+    width: auto;
+}
 .mainContainer{
     height: 70vh;
     width: auto;
@@ -17,6 +20,7 @@
     width: 50%;
     max-height: 70vh;
     padding: 2%;
+    padding-bottom: 10vh;
     display: grid;
     grid-template-areas:
         "lblSelect lblSelect lblSelect lblSelect"

@@ -2,6 +2,8 @@
 .information_CL {
     min-height: 50vh;
     margin: 10vh 5vw;
+    margin-bottom: 5vh;
+    padding-bottom: 5vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -43,6 +45,8 @@ a:link, a:visited, a:active {
         .information_CL {
         min-height: 50vh;
         margin: 10vh 5vw;
+        margin-bottom: 5vh;
+        padding-bottom: 5vh;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;

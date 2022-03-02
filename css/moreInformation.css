@@ -1,3 +1,6 @@
+html{
+    width: auto;
+}
 .mainContainer {
     display: flex;
     flex-flow: column nowrap;
@@ -12,7 +15,6 @@
     margin-bottom: 6vh;
     padding: 0.5vh 2vw;
     text-align: center;
-    /* width: max-content; */
 }
 
 article h1 {

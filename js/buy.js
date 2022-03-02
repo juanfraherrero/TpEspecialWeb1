@@ -1,57 +1,49 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    let btnVerify = document.getElementsByClassName("verifyCaptcha");
-    btnVerify[0].addEventListener("click", verificar);
+    let btnVerify = document.querySelector(".verifyCaptcha");
+    btnVerify.addEventListener("click", verificar);
+    let btnBuy = document.querySelector(".sendForm");
     let areaCaptcha = document.getElementsByClassName("captcha");
     let inpCaptcha = document.querySelector(".inputCaptcha");
     let captcha = {
         "valido" : 0,
     };
-
-
+    //we set a random number between 1 and 10000 to create a captcha
     function setearCaptcha(){
-        let RandomNumber = Math.floor(Math.random()*10000) + 1; //obtenemos un número del 1 al 10000
+        let RandomNumber = Math.floor(Math.random()*10000) + 1;
         areaCaptcha[0].innerHTML = RandomNumber;
     }
-
+    //verify the captcha with the user answer, if not valid create a new captcha
     function verificar(){
         let userNumber = parseInt(inpCaptcha.value);
         let correctNumber = parseInt(areaCaptcha[0].innerHTML);
         let answerFinal = document.querySelector(".answerVerifyCaptcha");
         if (userNumber == correctNumber) {
-            answerFinal.innerHTML = "el captcha ingresado es correcto, puede proseguir con la compra";
+            answerFinal.innerHTML = "the captcha is valid, you can keep buying";
             captcha.valido = 1;
         }
         else {
-            answerFinal.innerHTML = "el captcha ingresado es invalido";
+            answerFinal.innerHTML = "the captcha is invalid";
             setearCaptcha();
-            console.log(answerFinal)
             }
     }
-    
-    // seteamos el captcha al iniciar la página y esperamos el momento de verificación
-    setearCaptcha();
-    
-    //al darle a comprar salta que la compra fue exitosa y a los 3 segundos es redirigida a home.html
-    
+    //redirect to home
     function redirigirHome(){
         window.location.href = "../index.html"
     }
-
-    let btnBuy = document.querySelector(".sendForm");
+    //set the captcha when the page start
+    setearCaptcha();
     
-    btnBuy.addEventListener("click", () => {
+    btnBuy.addEventListener("click", (event) => {
         event.preventDefault();
         let answerFinal = document.querySelector(".answerVerifyCaptcha");
         if (captcha.valido == 1)  {
-            answerFinal.innerHTML = "Gracias por adquirir el servicio de Cloud Hosting, en 5 segundos será redirigido al home";
+            answerFinal.innerHTML = "Thanks for get the Cloud Hosting service, in 5 seconds you are going to be redirected to home";
             setTimeout(redirigirHome, 5000)
         }
         else{
-            answerFinal.innerHTML = "Debe verificar el captcha";
-
+            answerFinal.innerHTML = "please verify the captcha";
         }
     })
 
