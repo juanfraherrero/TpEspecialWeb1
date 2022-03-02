@@ -4,7 +4,7 @@ html{
 /*styles for the table*/
 .title {
     width: 100%;
-    margin: 3vh 0vw;
+    margin: 5vh 0vw;
     text-align: center;
     font-size: calc(1.5em + 1vw) ;
     text-transform: capitalize;
@@ -87,6 +87,7 @@ table tbody .edit, table tbody .delete {
 .filtro{
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 5vh;
     display: flex;
     flex-flow:column nowrap;
     justify-content: space-evenly;
@@ -222,7 +223,7 @@ table tbody .edit, table tbody .delete {
     }
     .addComment .infoUserToPost{
         flex-flow: row nowrap;
-        margin: 5vh 0vw;
+        margin-bottom: 5vh;
     }
     .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost .slc-membership{
         margin: 0;

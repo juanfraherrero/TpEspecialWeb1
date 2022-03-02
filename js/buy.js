@@ -28,10 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setearCaptcha();
             }
     }
-    //redirect to home
-    function redirigirHome(){
-        window.location.pathname = "/index.html"
-    }
+    
     //set the captcha when the page start
     setearCaptcha();
     
@@ -39,8 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         let answerFinal = document.querySelector(".answerVerifyCaptcha");
         if (captcha.valido == 1)  {
-            answerFinal.innerHTML = "Thanks for get the Cloud Hosting service, in 5 seconds you are going to be redirected to home";
-            setTimeout(redirigirHome, 5000)
+            answerFinal.innerHTML = "Thanks for get the Cloud Hosting service";
         }
         else{
             answerFinal.innerHTML = "please verify the captcha";

@@ -63,7 +63,7 @@ function initPage() {
     function clearForm(){
         containerName.value ="";
         containerSurname.value="";
-        containerMembership.value="Membership Type";
+        containerMembership.value="single";
         containerText.value="";
     }
     //toggle buttons between edit a comment and confirm or cancel the edition
