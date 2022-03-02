@@ -14,6 +14,11 @@ function initPage() {
     let containerForMessagesToUser = document.querySelector(".loadingComments");
     let titleAddComment = document.querySelector("body .addComment");
     let idForEditComment = 0;
+    //for the filter
+    let containerNameToFilter = document.querySelector(".textoAFiltrar");
+    let containerMembershipToFilter = document.querySelector("section .slc-membership");
+    let btnFilter = document.querySelector(".btnFiltrar");
+    let btnSeeAll = document.querySelector(".btnSeeAll");
     //For the form
     let containerName = document.querySelector(".addComment .name");
     let containerSurname = document.querySelector(".addComment .surname");
@@ -36,6 +41,11 @@ function initPage() {
         containerForComments.appendChild(row);
         
         
+    }
+    //clear the content of the filter inputs
+    function clearFilter(){
+        containerNameToFilter.value = "";
+        containerMembershipToFilter.value = "all";
     }
     //clear the h3 titlle in 5 seconds
     function clearMessage5s(){
@@ -216,8 +226,6 @@ function initPage() {
         if (array[indice].membership == "business"){
             row.className = "highlight";                                     //<div class="mebershipType"></div>
         }
-
-
         return row;
     }
     //load three comments in the comment table, the comments must be in the local araComment
@@ -230,6 +238,7 @@ function initPage() {
             }else if(indice !=  0 || arguments[1] ){    //if we are not in the first position or if we are in the first position but we press the morecomments button
                 containerForMessagesToUser.innerHTML = "there are no more comments";
                 clearMessage5s();
+                break;
             }
         }
     }
@@ -301,14 +310,50 @@ function initPage() {
             console.log(error);
         }
     }
+    function filterComments(){
+        filterActive = true;
+        //filter by name
+        let nameToFilter = containerNameToFilter.value.toLowerCase();
+        let arrayFiltered = arrComments.filter( function (objeto){
+            return objeto.name.toLowerCase().includes(nameToFilter)
+        })
+        
+        //filter by membership
+        let membershipToFilter = containerMembershipToFilter.value;
+        if (membershipToFilter == "all"){membershipToFilter = ""}
+
+        arrayFiltered = arrayFiltered.filter((objeto)=>{
+            return objeto.membership.includes(membershipToFilter)
+        })
+        
+        clearComments();
+        indice = 0;
+        loadThreeComments(arrayFiltered);        
+    }
+    function unfilterComments(){
+        filterActive = false;
+
+        //don't clear the arratFiltered
+        clearComments();
+        clearFilter();
+        indice=0;
+        loadThreeComments(arrComments)
+    }
 
     let arrComments = [];               //create array of comments for local store
+    let arrayFiltered = [];               //create array of comments for local store
+    let filterActive = false;           //a boolean who say if we are filtering comment or no
     let indice = 0;                     //indice is the index where we store the last comment showed in the screen
     fetchComments();                    //fetch all comments in the API https://62180ad01a1ba20cba97626d.mockapi.io/api/v1/CommentsUsers    
-    
 
     //events listeners for fixed button in the html
-    btnMoreComment.addEventListener("click", () => {loadThreeComments(arrComments, true)});
+    btnMoreComment.addEventListener("click", () => {
+        if (filterActive){
+            loadThreeComments(arrayFiltered, true);
+        }else{
+            loadThreeComments(arrComments, true)
+        }
+    });
     btnDeleteAll.addEventListener("click", () => {deleteAll(arrComments)});
     btnSend.addEventListener("click", (event)=> {
         event.preventDefault();
@@ -323,5 +368,7 @@ function initPage() {
         putComment();
     });
     btnCancel.addEventListener("click", restoreEdit);
-
+    //buttons for filter
+    btnFilter.addEventListener("click", filterComments);
+    btnSeeAll.addEventListener("click", unfilterComments);
 }

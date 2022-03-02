@@ -53,15 +53,28 @@
     <div class="divButton">
         <button class="moreComments">more comments</button>
     </div>
-    
+    <section class="filtro">
+        <input class="textoAFiltrar aCompletar" type="text" placeholder="name to filter...">
+        <div class="membershipAFiltrar">
+            <label>Membership</label>
+            <select name="slc-membership" class="slc-membership" >
+                <option selected value="all">All</option>
+                <option value="single">Single</option>
+                <option value="premium">Premium</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+        <button class="btnFiltrar boton">filter</button>
+        <button class="btnSeeAll boton">see all</button>
+    </section>    
     <h1 class="title addComment">add comment</h1>
     <form class="addComment">
         <div class="infoUserToPost">
             <input class="name" type="text" name="name" placeholder="name..." required>
             <input class="surname" type="text" name="surname" placeholder="surname..." >
             <div class="divMembership">
-                <label>Membership Type</label>
-                <select name="slc-membership" id="slc-membership" >
+                <label>Membership</label>
+                <select name="slc-membership" class="slc-membership" >
                     <option selected value="single">Single</option>
                     <option value="premium">Premium</option>
                     <option value="business">Business</option>

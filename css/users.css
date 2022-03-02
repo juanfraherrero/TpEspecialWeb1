@@ -86,7 +86,7 @@ table tbody .edit:hover, table tbody .delete:hover {
     justify-content: space-evenly;
     align-items: center;
 }
-.divButton .moreComments{
+.divButton .moreComments, .btnFiltrar, .btnSeeAll{
     background-color: #162e92;
     color: white;
     padding:1%;
@@ -98,11 +98,36 @@ table tbody .edit:hover, table tbody .delete:hover {
     cursor: pointer;
     transition: box-shadow 0.2s;
 }
-.divButton .moreComments:hover{
+.divButton .moreComments:hover, .btnFiltrar:hover, .btnSeeAll:hover    {
     box-shadow: 0.5px 1px 3px 0.5px black;
 }
+/*styles for the filter*/
+.filtro{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.filtro .aCompletar{
+    padding:1%;
+    border: 2px solid #162e92;
+    border-radius: 25px;
+    text-transform: capitalize;
+    margin: 1vh 0vw;
+}
+.membershipAFiltrar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.membershipAFiltrar label{
+    margin-right: 5%;
+}
 
-/* estilos para el formulario de agregar comentario*/
+/*styles for the form add comment*/
 
 .addComment{
     display: flex;
@@ -122,9 +147,9 @@ table tbody .edit:hover, table tbody .delete:hover {
     align-items: center;
     margin-bottom: 3vh;
 }
-.addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost #slc-membership{
+.addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost .slc-membership{
     flex: 1 1 auto;
-    background-color: #eee;
+    /* background-color: #eee; */
     padding:1%;
     border: 2px solid #162e92;
     border-radius: 25px;
@@ -144,8 +169,9 @@ table tbody .edit:hover, table tbody .delete:hover {
     font-weight: bold;
     font-size: calc(0.5em + 0.3vw);
 }
-.addComment .infoUserToPost #slc-membership {
+.slc-membership {
     width: 100%;
+    padding: 3%;
     color: white;
     background-color: #162e92;
     font-size: calc(0.8em + 0.5vw);
@@ -156,7 +182,7 @@ table tbody .edit:hover, table tbody .delete:hover {
     transition: box-shadow 0.2s;
     
 }
-.addComment #slc-membership:hover{
+.slc-membership:hover{
     box-shadow: 0.5px 1px 3px 0.5px black;
 }
 
@@ -246,9 +272,8 @@ table tbody .edit:hover, table tbody .delete:hover {
         align-items: center;
         margin: 5vh 0vw;
     }
-    .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost #slc-membership{
+    .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost .slc-membership{
         margin: 0;
-        /* width: 10vh; */
 
     }
 }
