@@ -1,7 +1,7 @@
 html{
     width: auto;
 }
-/* estilos para la tabla*/
+/*styles for the table*/
 .title {
     width: 100%;
     margin: 3vh 0vw;
@@ -47,38 +47,22 @@ table tbody .name, table tbody .membershipType, table tbody .time{
 .businessRow{
     background-color: #ff8e00;
 }
-
-
-/*estilos para el texto */
 table tbody .text{
     padding: 2%;
 }
 
-/* estilos para las opciones*/
+/*styles for the options, the column actions*/
 table tbody .optionsColumn{
     vertical-align: middle; 
     text-align: center;   
 }
-
 table tbody .edit, table tbody .delete {
-    background-color: #162e92;
-    color: white;
     font-size: calc(0.4em + 0.5vw + 0.5vh);
     padding:10%;
     margin: 2vh 0.2vw;
-    border: none;
-    border-radius: 25px;
-    text-transform: capitalize;
-    cursor: pointer;
     transition: box-shadow 0.2s;
 }
-
-table tbody .edit:hover, table tbody .delete:hover {
-    box-shadow: 0.5px 1px 3px 0.5px black;
-}
-
-/* estilo para el botón de más comentarios*/
-
+/*styles for the div more information and Clear All*/
 .divButton{
     width: 100%;
     display: flex;
@@ -86,44 +70,42 @@ table tbody .edit:hover, table tbody .delete:hover {
     justify-content: space-evenly;
     align-items: center;
 }
-.divButton .moreComments, .btnFiltrar, .btnSeeAll{
-    background-color: #162e92;
-    color: white;
+/*style for the button More Comments, filter and See All*/
+.divButton #moreComments, .btnFiltrar, .btnSeeAll{
+    margin: 1vh 0vw;
     padding:1%;
-    margin: 5vh 0vw;
-    border: none;
-    border-radius: 25px;
     font-size: calc(0.5em + 0.5vw + 0.5vh);
-    text-transform: capitalize;
-    cursor: pointer;
     transition: box-shadow 0.2s;
 }
-.divButton .moreComments:hover, .btnFiltrar:hover, .btnSeeAll:hover    {
-    box-shadow: 0.5px 1px 3px 0.5px black;
+.divButton #moreComments{
+    margin: 5vh 0vw;
+}
+.btnSeeAll{
+    margin-bottom: 5vh;
 }
 /*styles for the filter*/
 .filtro{
     width: 80%;
     margin: 0 auto;
     display: flex;
-    flex-flow:row nowrap;
+    flex-flow:column nowrap;
     justify-content: space-evenly;
     align-items: center;
 }
-.filtro .aCompletar{
+.filtro #textoAFiltrar{
     padding:1%;
     border: 2px solid #162e92;
     border-radius: 25px;
     text-transform: capitalize;
     margin: 1vh 0vw;
 }
-.membershipAFiltrar{
+#membershipAFiltrar{
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
 }
-.membershipAFiltrar label{
+#membershipAFiltrar label{
     margin-right: 5%;
 }
 
@@ -149,16 +131,13 @@ table tbody .edit:hover, table tbody .delete:hover {
 }
 .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost .slc-membership{
     flex: 1 1 auto;
-    /* background-color: #eee; */
     padding:1%;
     border: 2px solid #162e92;
     border-radius: 25px;
     text-transform: capitalize;
     margin: 1vh 0vw;
 } 
-.addComment .infoUserToPost .name,.addComment .infoUserToPost .surname{
-    margin-right: 1vw;
-}
+
 .divMembership{
     flex: 1 1 auto;
     display: flex;
@@ -172,18 +151,8 @@ table tbody .edit:hover, table tbody .delete:hover {
 .slc-membership {
     width: 100%;
     padding: 3%;
-    color: white;
-    background-color: #162e92;
     font-size: calc(0.8em + 0.5vw);
-    border: none;
-    border-radius: 25px;
-    text-align: center;
-    cursor: pointer;
     transition: box-shadow 0.2s;
-    
-}
-.slc-membership:hover{
-    box-shadow: 0.5px 1px 3px 0.5px black;
 }
 
 .addComment textarea{
@@ -194,87 +163,73 @@ table tbody .edit:hover, table tbody .delete:hover {
     min-height: 40vh;
     margin-bottom: 4vh;
 }
+/*buttons cancel confirm and send below the comment area*/
 .buttonsForm{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-
 }
 .addComment .editButton{
     align-self: flex-end;
     width: 20vw;
     padding: 2%;
-    background-color: #162e92;
-    color: white;
-    text-transform: capitalize;
     font-size: calc(0.8em + 1vw);
-    border: none;
-    border-radius: 25px;
     margin-bottom: 5vh;
     margin-left: 1vw;
-    cursor: pointer;
     transition: box-shadow 0.2s;
 
 }
-.addComment .editButton:hover{
-    box-shadow: 0.5px 1px 3px 0.5px black;
-}
-/*estilo de la dicvión con el botón de clear*/
+
+/*style fot the hr below the addComment form*/
 .addComment hr{
     width: 50vw;
     border-style: solid;
     border:2px solid #162e92;
 
 }
-/*estilo del último botón que vacía todos los comentarios, feature de superusuario*/
+/*style for Clear All button, feature for superuser*/
 .comments {
     margin: 1vh auto;
 }
-.clearComments{
+#clearComments{
     width: 50vw;
-    background-color: #162e92;
-    color: white;
-    text-transform: capitalize;
     font-size: calc(1em + 2vw);
-    border: none;
-    border-radius: 25px;
     margin-top: 3vh;
     margin-bottom: 10vh;
     padding: 1%;
     padding-top: 0;
-    cursor: pointer;
-    text-align: center;
     transition: box-shadow 0.2s;
 }
-.clearComments span{
+#clearComments span{
     text-transform: uppercase;
     text-decoration: underline;
     color: red;
     line-height: 2em;
 }
-.clearComments:hover{
-    box-shadow: 0.5px 1px 3px 0.5px black;
-}
 
 /*desktop*/
 @media screen and (min-width:610px) {
+    .filtro{
+        flex-flow:row nowrap;
+    }
+    .btnSeeAll{
+        margin-bottom: 0vh;
+    }
     .addComment{
         padding-top: 2vh;
     }
-
     .addComment .infoUserToPost{
-        width: 100%;
-        display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
         margin: 5vh 0vw;
     }
     .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname, .addComment .infoUserToPost .slc-membership{
         margin: 0;
-
+        
+    }
+    .addComment .infoUserToPost .name,.addComment .infoUserToPost .surname{
+    margin-right: 1vw;
     }
 }
 

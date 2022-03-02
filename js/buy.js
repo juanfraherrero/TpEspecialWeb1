@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let btnVerify = document.querySelector(".verifyCaptcha");
     btnVerify.addEventListener("click", verificar);
-    let btnBuy = document.querySelector(".sendForm");
+    let btnBuy = document.querySelector("#btnBuy");
     let areaCaptcha = document.getElementsByClassName("captcha");
     let inpCaptcha = document.querySelector(".inputCaptcha");
     let captcha = {

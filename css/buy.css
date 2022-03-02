@@ -14,7 +14,7 @@ html{
 .imgBuy {
     display: none;
 }
-
+/*style for the main form*/
 .formBuy{
     flex: 1 1 auto;
     width: 50%;
@@ -33,6 +33,7 @@ html{
     grid-template-rows: max-content 1fr 3fr 1fr 1fr 1fr;
     grid-template-columns: repeat(4,1fr);
 }
+
 .lbl-membership{
     grid-area: lblSelect;
     font-size: calc(0.6em + 0.5vw);
@@ -42,15 +43,10 @@ html{
     margin-bottom: 3%;
 }
 
-.formBuy select {
+#slc-membership {
     grid-area: select;
-    color: white;
     font-size: calc(0.8em + 0.5vw);
-    background-color: #162e92;
-    border: none;
-    border-radius: 25px;
-    padding: 2%;
-    text-align: center;
+    padding: 2%; 
     transition: box-shadow 0.1s;
 }
 .formBuy select:hover{
@@ -93,12 +89,7 @@ html{
 .verifyCaptcha{
     flex: 0 1 2vw;
     font-size: calc(0.6em + 0.5vw);
-    text-transform: capitalize;
-    border: none;
-    background-color: #162e92;
-    color: white;
     padding: 3%;
-    border-radius: 25px;
     transition: box-shadow 0.2s;
 }
 
@@ -115,7 +106,7 @@ html{
     line-height: calc(3vh + 0.5vw);
 }
     
-.sendForm{
+#btnBuy{
     grid-area: btnBbuy;
     font-size: calc(1em + 0.5vw);
     font-weight: bold;
@@ -125,10 +116,11 @@ html{
     margin-top: 1vh;
     padding: 7%;
     border-radius: 25px;
+    cursor: pointer;
     transition: box-shadow 0.2s;
 }
 
-.sendForm:hover{
+#btnBuy:hover{
     box-shadow: 0.5px 1px 3px 0.5px black;
 }
 

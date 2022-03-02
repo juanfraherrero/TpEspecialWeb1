@@ -18,20 +18,10 @@
 
 .btn-more_information{
     flex: 0 1 10vh;
-    display: flex;          /* el display flex se usa para ordenar el tag a*/
-    flex-flow: row nowrap;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    border: none;
     max-height: 15vh;
     font-size: calc(1em + 1vw); 
-    text-transform: capitalize;  
-    text-align: center;
     margin-bottom: 5%;
     padding: 1.5%;
-    border-radius: 25px;
-    background-color: #162e92;
     transition: box-shadow 0.1s;
 }
 .btn-more_information:hover{
@@ -52,14 +42,7 @@ a:link, a:visited, a:active {
         justify-content: space-around;
         align-items: center;
     }
-    .information_CL {
-        min-height: 50vh;
-        margin: 10vh 5vw;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
+    
     .CL_description{
         flex: 0 1 30vw;
         font-size: calc(2em + 2vw);

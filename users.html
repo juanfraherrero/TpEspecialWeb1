@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/estructuraBase.css">
+        <link rel="stylesheet" href="css/basicComponents.css">
         <link rel="stylesheet" href="css/users.css">
         <script defer src="js/estructuraBase.js"></script>
         <script defer src="js/users.js"></script>
@@ -50,31 +51,31 @@
         </tbody>
     </table>
 
-    <div class="divButton">
-        <button class="moreComments">more comments</button>
+    <div class="divButton" id="divMoreComment">
+        <button id="moreComments" class="blueButton">more comments</button>
     </div>
     <section class="filtro">
-        <input class="textoAFiltrar aCompletar" type="text" placeholder="name to filter...">
-        <div class="membershipAFiltrar">
+        <input id="textoAFiltrar" type="text" placeholder="name to filter...">
+        <div id="membershipAFiltrar">
             <label>Membership</label>
-            <select name="slc-membership" class="slc-membership" >
+            <select name="slc-membership" class="slc-membership blueButton" >
                 <option selected value="all">All</option>
                 <option value="single">Single</option>
                 <option value="premium">Premium</option>
                 <option value="business">Business</option>
             </select>
         </div>
-        <button class="btnFiltrar boton">filter</button>
-        <button class="btnSeeAll boton">see all</button>
+        <button class="btnFiltrar blueButton">filter</button>
+        <button class="btnSeeAll blueButton">see all</button>
     </section>    
-    <h1 class="title addComment">add comment</h1>
+    <h1 id="toAddComment" class="title">add comment</h1>
     <form class="addComment">
         <div class="infoUserToPost">
             <input class="name" type="text" name="name" placeholder="name..." required>
             <input class="surname" type="text" name="surname" placeholder="surname..." >
             <div class="divMembership">
                 <label>Membership</label>
-                <select name="slc-membership" class="slc-membership" >
+                <select name="slc-membership" class="slc-membership blueButton" >
                     <option selected value="single">Single</option>
                     <option value="premium">Premium</option>
                     <option value="business">Business</option>
@@ -83,14 +84,14 @@
         </div>
         <textarea name="comment" placeholder="place your comment..."  ></textarea>
         <div class="buttonsForm">
-            <input class="editButton cancel hide" type="submit" value="cancel">
-            <input class="editButton confirm hide" type="submit" value="confirm">
-            <input class="editButton sendForm" type="submit" value="send">
+            <input class="editButton blueButton cancel hide" type="submit" value="cancel">
+            <input class="editButton blueButton confirm hide" type="submit" value="confirm">
+            <input class="editButton blueButton sendForm" type="submit" value="send">
         </div>
         <hr class="divison">
     </form>
     <div class="divButton">
-        <buttton class="clearComments"><span>caution</span><br>clear all comments</buttton>
+        <buttton id="clearComments" class="blueButton"><span>caution</span><br>clear all comments</buttton>
     </div>
     <footer>
         All rights reserved Cloud Hosting©

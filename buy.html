@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="css/estructuraBase.css">
+        <link rel="stylesheet" href="css/basicComponents.css">
         <link rel="stylesheet" href="css/buy.css">
         <script defer src="js/estructuraBase.js"></script>
         <script defer src="js/buy.js"></script>
@@ -41,7 +42,7 @@
         <img class="imgBuy" src="images/guysForBuy.svg" alt="Guys buying">
         <form class="formBuy">
             <label class="lbl-membership" for="slc-membership">Select the type of membership</label>
-            <select name="slc-membership" id="slc-membership">
+            <select name="slc-membership" id="slc-membership" class="blueButton">
                 <option value="single">Single</option>
                 <option value="premium">Premium</option>
                 <option value="business">Business</option>
@@ -51,12 +52,12 @@
             </div>
             <div class="containerVerifyCaptcha">
                 <input class="inputCaptcha" type="number" name="inputCaptcha" placeholder="ingrese captcha...">
-                <input class="verifyCaptcha" type="button" value="verify" name="verifycaptcha">
+                <input class="verifyCaptcha blueButton" type="button" value="verify" name="verifycaptcha">
             </div>
             <div class="answerVerifyCaptcha">
 
             </div>
-            <input class="sendForm" type="submit" value="Buy">
+            <input id="btnBuy" type="submit" value="Buy">
         </form>
     </section>
 

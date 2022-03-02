@@ -5,17 +5,19 @@ document.addEventListener("DOMContentLoaded", initPage)
 function initPage() {
     const url = "https://62180ad01a1ba20cba97626d.mockapi.io/api/v1/CommentsUsers"
     
-    let btnMoreComment = document.querySelector(".divButton");
-    let btnDeleteAll = document.querySelector(".divButton .clearComments");
+    let divMoreComment = document.querySelector("#divMoreComment")
+    let btnMoreComment = document.querySelector("#moreComments");
+    let btnDeleteAll = document.querySelector(".divButton #clearComments");
     let btnSend = document.querySelector(".sendForm");    
     let btnCancel = document.querySelector("form .cancel");    
     let btnConfirm = document.querySelector("form .confirm");    
     let containerForComments = document.querySelector("table tbody");
     let containerForMessagesToUser = document.querySelector(".loadingComments");
-    let titleAddComment = document.querySelector("body .addComment");
+    let titleAddComment = document.querySelector("body #toAddComment");
     let idForEditComment = 0;
     //for the filter
-    let containerNameToFilter = document.querySelector(".textoAFiltrar");
+    let containerFilter = document.querySelector(".filtro")
+    let containerNameToFilter = document.querySelector("#textoAFiltrar");
     let containerMembershipToFilter = document.querySelector("section .slc-membership");
     let btnFilter = document.querySelector(".btnFiltrar");
     let btnSeeAll = document.querySelector(".btnSeeAll");
@@ -66,10 +68,11 @@ function initPage() {
     }
     //toggle buttons between edit a comment and confirm or cancel the edition
     function toggleElements(){
-        btnMoreComment.classList.toggle("hide");
+        divMoreComment.classList.toggle("hide");
         btnCancel.classList.toggle("hide");
         btnConfirm.classList.toggle("hide");
         btnSend.classList.toggle("hide");
+        containerFilter.classList.toggle("hide");
     }
     //show in the form the content of the object, the object is a comment
     function showInfoComment(object){
@@ -203,12 +206,12 @@ function initPage() {
         //create the third columns, the buttons edit and delete
         
         let btnEdit = document.createElement("button");
-        btnEdit.className = "edit";
+        btnEdit.className = "edit blueButton";
         btnEdit.innerHTML = "edit";
         btnEdit.addEventListener("click", editfunc)         //we add a listener to the button edit
         
         let btnDelete = document.createElement("button");
-        btnDelete.className = "delete";
+        btnDelete.className = "delete blueButton";
         btnDelete.innerHTML = "delete";
         btnDelete.addEventListener("click", deletefunc)     //we add a listener to the button delete
         

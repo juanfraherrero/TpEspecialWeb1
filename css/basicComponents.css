@@ -1,0 +1,29 @@
+.blueButtonFlex{
+    display: flex;          /* el display flex se usa para ordenar el tag a*/
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;  
+    text-align: center;
+    border-radius: 25px;
+    background-color: #162e92;
+}
+.blueButton{
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;  
+    text-align: center;
+    border-radius: 25px;
+    background-color: #162e92;
+}
+
+.blueButton:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
+.blueButtonFlex:hover{
+    box-shadow: 0.5px 1px 3px 0.5px black;
+}
