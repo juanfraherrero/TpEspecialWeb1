@@ -1,8 +1,6 @@
-Un archivo comprimido de menos de 5MB
+This is web page created for a project of WEB 1
 
-revisar repetición de código
-y nombres no representativos
-
+it is a responsive mobile first web page about hosting, the business "Cloud Hosting" is made up.
 
 
 
